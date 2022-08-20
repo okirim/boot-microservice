@@ -11,6 +11,7 @@
         <module name="client" />
         <module name="fraud" />
         <module name="notifications" />
+        <module name="gateway" />
         <module name="customer" />
       </profile>
     </annotationProcessing>
