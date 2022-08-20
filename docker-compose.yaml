@@ -27,10 +27,18 @@ services:
        PGADMIN_CONFIG_SERVER_MODE: ${PGADMIN_CONFIG_SERVER_MODE:-False}
     networks:
       - postgres
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+#   networks:
+#     - spring
 networks:
   postgres:
     driver: bridge
-
+#  spring:
+#    driver: bridge
 volumes:
   postgres_data:
   pgadmin_data:
