@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public record CustomerController(CustomerService customerService) {
     @PostMapping
     public void registerCustomer(@RequestBody CustomerRegisterDTO dto) {
-        log.info("Registering customer {}", dto);
-        System.out.println("register customer");
+        log.info("Registering app {}", dto);
+        System.out.println("register app");
         customerService.register(dto);
     }
 

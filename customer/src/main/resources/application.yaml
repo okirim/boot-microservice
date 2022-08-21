@@ -25,3 +25,13 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     #enabled: false
+rabbitmq:
+  exchanges:
+    internal: internal.exchange #topic exchange
+  queues:
+    notification: notification.queue #queue name
+  routing-keys:
+    internal-notification: internal.notification.routing-key  #routing key to bind topic with the queue
+  # producer ----(all messages go to the Topic)---> topic exchange (will bind the route with the queue using routing key) -------> queue (queue name) -------> consumer
+
+

@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="fraud" />
+        <module name="amqp" />
         <module name="eureka_server" />
         <module name="client" />
-        <module name="fraud" />
         <module name="notifications" />
         <module name="gateway" />
         <module name="customer" />
@@ -18,7 +19,6 @@
     <bytecodeTargetLevel>
       <module name="eureka-server" target="17" />
       <module name="notification" target="17" />
-      <module name="untitled" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
