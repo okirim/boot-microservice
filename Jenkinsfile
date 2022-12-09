@@ -12,6 +12,15 @@ pipeline {
       }
     }
 
+    stage('deploy') {
+      steps {
+        sshagent() {
+          sh 'ssh root@kadiro.sbs'
+        }
+
+      }
+    }
+
   }
   environment {
     GITHUB_TOKEN = 'secret'
