@@ -14,7 +14,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sshagent() {
+        sshagent(credentials : ['remote-sever']) {
           sh 'ssh root@kadiro.sbs'
         }
 
