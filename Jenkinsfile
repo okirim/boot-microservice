@@ -10,7 +10,8 @@ pipeline {
     stage('deploy') {
       steps {
         sshagent(credentials : ['remote-server']) {
-          sh 'ssh -T root@161.35.227.21 -y'
+         sh 'ssh -o StrictHostKeyChecking=no root@161.35.227.21 uptime'
+         sh 'ssh -v root@161.35.227.21'
         }
 
       }
