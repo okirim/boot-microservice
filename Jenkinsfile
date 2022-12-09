@@ -9,7 +9,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sshagent(credentials : ['remote-sever']) {
+        sshagent(credentials : ['remote-server']) {
           sh 'ssh -T root@161.35.227.21'
         }
 
